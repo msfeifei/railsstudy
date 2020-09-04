@@ -1,9 +1,9 @@
 require 'rails_helper'
- #RSpec.describe Person, type: :model do
- #pending "add some examples to (or delete) #{__FILE__}"
-describe Person do
-  it "should resopnse to full_name" do
-    person = Person.new(first_name: 'feifei', last_name: 'wang')
-    expect(person.full_name).to eql('feifei wang') 
-  end
+
+RSpec.describe Person, type: :model do
+  describe Person do
+    it 'is fail when not filling' do
+      person = Person01.new(first_name: ' ',last_name: 'wang')
+      expect(person).to be_valid
+    end
 end
