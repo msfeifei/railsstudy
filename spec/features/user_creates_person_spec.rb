@@ -11,7 +11,7 @@ RSpec.feature 'User creates a person' do
 
         expect(page).to have_text("All People")
         expect(page).to have_text("wang")
-        expect(page).to h有了，jave_text("Male")
+        expect(page).to have_text("Male")
     end
     scenario 'not see person on the page' do
         visit new_person_path
